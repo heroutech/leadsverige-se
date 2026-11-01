@@ -1,6 +1,6 @@
-/* LeadSverige – webbutkast. Struktur och klassnamn efter ANBRA:s stil.css (heroutech/anbra-se), egna färger. Inga webbtypsnitt, inga externa resurser. */
+/* LeadSverige – grundstil. Färger enligt grafisk profil 2026-11-01; profilens regler ligger i leadsverige-profil.css som laddas efter denna fil. */
 :root{
-  --skog:#1E3A5F;--black:#16202B;--linne:#F4F6F8;--sand:#D5DCE4;--aprikos:#E0A526;--sten:#56616D;--vit:#fff;
+  --skog:#1E50C8;--black:#161B26;--linne:#F3F5F9;--sand:#DDE3ED;--aprikos:#1E50C8;--sten:#586174;--vit:#fff;
   --rubrik:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--text:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --max:1120px;--r:14px;
 }
@@ -24,7 +24,7 @@ p{margin:0 0 1em}
 .sten{color:var(--sten)}
 .skip{position:absolute;left:-9999px;top:0;background:var(--skog);color:var(--linne);padding:.6em 1em;z-index:10}
 .skip:focus{left:12px;top:12px}
-.ph{background:#fff3e9;border:1px dashed var(--aprikos);border-radius:4px;padding:0 .3em;color:var(--black);font-weight:600;-webkit-box-decoration-break:clone;box-decoration-break:clone;overflow-wrap:anywhere}
+.ph{background:#F3F5F9;border:1px dashed var(--aprikos);border-radius:4px;padding:0 .3em;color:var(--black);font-weight:600;-webkit-box-decoration-break:clone;box-decoration-break:clone;overflow-wrap:anywhere}
 
 /* Knappar */
 .knapp{display:inline-flex;align-items:center;gap:.5em;font:600 1rem/1 var(--text);padding:.95em 1.4em;border-radius:999px;text-decoration:none;border:2px solid var(--skog);transition:background .15s,color .15s;cursor:pointer}
@@ -51,7 +51,7 @@ p{margin:0 0 1em}
 .hero .knappar{display:flex;flex-wrap:wrap;gap:12px;margin:2rem 0 1.25rem}
 .hero .notis-rad{font-size:.92rem;color:var(--sten);display:flex;gap:.55em;align-items:flex-start;max-width:34em}
 .hero .notis-rad svg{flex:none;margin-top:.25em}
-.kort{background:var(--vit);border-radius:var(--r);padding:28px;box-shadow:0 1px 0 rgba(22,32,43,.04),0 18px 40px -24px rgba(30,58,95,.35);border:1px solid rgba(213,220,228,.7)}
+.kort{background:var(--vit);border-radius:var(--r);padding:28px;box-shadow:0 1px 0 rgba(22,27,38,.04),0 18px 40px -24px rgba(30,80,200,.35);border:1px solid rgba(213,220,228,.7)}
 .exempel{position:relative}
 .exempel .flagga{position:absolute;top:-12px;right:20px;background:var(--sand);color:var(--black);font:600 .72rem/1 var(--text);letter-spacing:.1em;text-transform:uppercase;padding:.55em .8em;border-radius:999px}
 .exempel .rubrikrad{display:flex;gap:12px;align-items:center;margin-bottom:14px}
@@ -149,8 +149,8 @@ p{margin:0 0 1em}
 form .falt{margin-bottom:18px}
 form .tva{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 label{display:block;font-weight:600;font-size:.93rem;margin-bottom:6px}
-input,textarea{width:100%;font:inherit;font-size:1rem;color:var(--black);background:var(--linne);border:1.5px solid #b9ae9d;border-radius:10px;padding:.75em .9em}
-input:focus,textarea:focus{outline:none;border-color:var(--skog);box-shadow:0 0 0 3px rgba(30,58,95,.18);background:var(--vit)}
+input,textarea{width:100%;font:inherit;font-size:1rem;color:var(--black);background:var(--linne);border:1.5px solid #586174;border-radius:10px;padding:.75em .9em}
+input:focus,textarea:focus{outline:none;border-color:var(--skog);box-shadow:0 0 0 3px rgba(30,80,200,.18);background:var(--vit)}
 textarea{min-height:130px;resize:vertical}
 form .knapp{margin-top:4px}
 form .finstilt{margin-top:14px}

@@ -1,0 +1,81 @@
+/* LeadSverige - profilunderlag 2026-11-01.
+   Ladda efter befintlig stil.css. Se Webbgranskning och införande.txt.
+   Kärnfärger och ordmärke följer godkännandet 2026-10-31.
+   UI-neutrala färger, Archivo i gränssnitt och komponentform är förslag. */
+@font-face{font-family:Archivo;src:url('../fonts/archivo-400.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Archivo;src:url('../fonts/archivo-500.woff2') format('woff2');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Archivo;src:url('../fonts/archivo-600.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:Archivo;src:url('../fonts/archivo-700.woff2') format('woff2');font-style:normal;font-weight:700;font-display:swap}
+:root{
+  --ls-blue:#1E50C8;--ls-graphite:#161B26;--ls-white:#FFFFFF;
+  --ls-logo-light-blue:#8FB0FF; /* Bara Sverige i mörkt ordmärke. */
+  --ls-surface:#F3F5F9;--ls-rule:#DDE3ED;--ls-muted:#586174;
+  --ls-font:Archivo,Arial,sans-serif;
+}
+body{background:var(--ls-white);color:var(--ls-graphite);font-family:var(--ls-font);line-height:1.55}
+h1,h2,h3{font-family:var(--ls-font);color:var(--ls-graphite);letter-spacing:-.02em}
+h1{font-weight:700;font-size:clamp(2rem,5.2vw,4.5rem);line-height:1.04}
+h2{font-weight:600;line-height:1.14}
+h3{font-weight:600}
+a{color:var(--ls-blue);text-decoration:underline;text-underline-offset:.2em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--ls-blue);outline-offset:4px;border-radius:3px}
+.ingress{color:var(--ls-graphite);font-size:1.125rem;line-height:1.6}
+.sten,.finstilt,.priskort .under,.kontaktlista span,.hero .notis-rad{color:var(--ls-muted)}
+.etikett{font-family:var(--ls-font);font-weight:600;letter-spacing:.08em;color:var(--ls-muted)}
+.etikett::before{background:var(--ls-blue);border-radius:1px}
+.notis-rad circle{fill:var(--ls-blue)}
+.topp{background:rgba(255,255,255,.96);border-color:var(--ls-rule)}
+.logo-text{font-family:var(--ls-font);color:var(--ls-graphite)}
+.logo img{width:160px;height:auto;min-width:100px}
+.meny a{color:var(--ls-graphite);font-family:var(--ls-font)}
+.meny a:hover{color:var(--ls-blue)}
+.knapp{font-family:var(--ls-font);font-weight:600;border-radius:6px;border-color:var(--ls-blue);min-height:44px}
+.knapp--fylld,.meny .knapp{background:var(--ls-blue);color:var(--ls-white)}
+.knapp--fylld:hover,.meny .knapp:hover{background:var(--ls-graphite);border-color:var(--ls-graphite);color:var(--ls-white)}
+.knapp--kant{background:var(--ls-white);color:var(--ls-blue)}
+.knapp--kant:hover{background:var(--ls-blue);color:var(--ls-white)}
+.knapp--ljus{background:var(--ls-white);border-color:var(--ls-white);color:var(--ls-graphite)}
+.knapp--ljus:hover{background:var(--ls-surface);border-color:var(--ls-surface)}
+.skip{background:var(--ls-blue);color:var(--ls-white)}
+.hero{background:var(--ls-white)}
+.kort{background:var(--ls-white);border:1px solid var(--ls-rule);border-radius:8px;box-shadow:none}
+.exempel{border-left:4px solid var(--ls-blue)}
+.exempel .flagga,.priskort--plus .flagga{background:var(--ls-surface);color:var(--ls-graphite);font-family:var(--ls-font);border-radius:4px}
+.exempel .rubrikrad p,.exempel dt{color:var(--ls-muted)}
+.exempel .rubrikrad strong,.exempel h3,.problem .kort h3{color:var(--ls-graphite)}
+.exempel .lista,.ikon{background:var(--ls-surface)}
+.exempel .val span{border-color:var(--ls-blue);color:var(--ls-blue);border-radius:5px}
+.exempel .val span:first-child{background:var(--ls-blue);color:var(--ls-white)}
+.sektion--sand{background:var(--ls-surface)}
+.sektion--skog{background:var(--ls-graphite);color:var(--ls-white)}
+.sektion--skog h2,.sektion--skog h3,.sektion--skog .etikett,.sektion--skog a{color:var(--ls-white)}
+.sektion--skog :focus-visible,.fot :focus-visible,.ai-rad :focus-visible{outline-color:var(--ls-white)}
+.steg li::before,.steg li:last-child::before{background:var(--ls-white);color:var(--ls-graphite);font-family:var(--ls-font)}
+.steg li::after{background:rgba(255,255,255,.3)}
+.steg p,.ansvar p{color:var(--ls-white)}
+.ansvar{border-color:rgba(255,255,255,.3);border-radius:8px}
+.ansvar strong{font-family:var(--ls-font);color:var(--ls-white)}
+.pilot-rad{background:var(--ls-surface);border-color:var(--ls-blue);border-radius:8px}
+.pilot-rad strong{font-family:var(--ls-font);color:var(--ls-graphite)}
+.priskort--plus{border-color:var(--ls-blue)}
+.priskort .belopp{font-family:var(--ls-font);color:var(--ls-graphite)}
+.priskort .belopp small{font-family:var(--ls-font);color:var(--ls-muted)}
+.priskort hr,.faq details,.faq details:first-of-type{border-color:var(--ls-rule)}
+.bock li::before{background-color:var(--ls-blue)}
+.faq summary{font-family:var(--ls-font);color:var(--ls-graphite)}
+.faq summary:hover{color:var(--ls-blue)}
+.faq summary::after{border-color:var(--ls-blue)}
+.ai-rad{background:var(--ls-graphite);color:var(--ls-white)}
+.ai-rad strong{color:var(--ls-white)}
+input,textarea{font-family:var(--ls-font);color:var(--ls-graphite);background:var(--ls-white);border-color:var(--ls-muted);border-radius:6px}
+input:focus,textarea:focus{border-color:var(--ls-blue);outline:2px solid var(--ls-blue);outline-offset:2px;box-shadow:none;background:var(--ls-white)}
+.fot{background:var(--ls-graphite);color:var(--ls-white)}
+.fot p,.fot a,.fot h3,.fot .botten,.fot .logo-text{color:var(--ls-white)}
+.fot h3{font-family:var(--ls-font)}
+.fot .botten{border-color:rgba(255,255,255,.3)}
+.utkast-band,.juridik-text th{background:var(--ls-surface);border-color:var(--ls-blue)}
+.juridik-text table,.juridik-text blockquote{background:var(--ls-white);border-color:var(--ls-rule)}
+.juridik-text th,.juridik-text td{border-color:var(--ls-rule)}
+.utkast-topp,.ph{background:var(--ls-surface);color:var(--ls-graphite);border-color:var(--ls-blue)}
+@media(max-width:720px){.logo img{width:140px}.hero{padding-top:48px}.ingress{font-size:1rem}}
