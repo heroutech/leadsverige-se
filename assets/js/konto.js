@@ -1,4 +1,4 @@
-// LeadSverige kundsida. Inloggning med e-post (länk eller kod). Läser bara kundens egna leads (RLS).
+// LeadSverige kundsida. Inloggning med engångskod från mejlet (ingen engångslänk, så att länkskannrar inte förbrukar koden). Läser bara kundens egna leads (RLS).
 // Betyg sparas via Edge Function "betyg" med kundens session.
 (function () {
   var URL_ = "https://nthoscaezhoksdudedlq.supabase.co";
@@ -16,21 +16,34 @@
   $("form-epost").addEventListener("submit", function (ev) {
     ev.preventDefault();
     epost = $("epost").value.trim().toLowerCase();
+    try { sessionStorage.setItem("lsEpost", epost); } catch (e) {}
     $("skicka-kod").disabled = true;
     sb.auth.signInWithOtp({ email: epost, options: { shouldCreateUser: false, emailRedirectTo: location.origin + "/konto/" } }).then(function (r) {
       $("skicka-kod").disabled = false;
       if (r.error) { meddela("Vi kunde inte skicka någon kod. Kontrollera adressen. Har du inget konto än? Mejla hej@leadsverige.se.", "fel"); return; }
       dolj("form-epost"); visa("form-kod"); $("kod").focus();
-      meddela("Vi har mejlat en inloggningslänk och en kod till " + epost + ". Klicka på länken eller skriv koden här.", "");
+      meddela("Vi har mejlat en kod till " + epost + ". Skriv koden här. Använd koden i det senaste mejlet.", "");
     });
   });
   $("form-kod").addEventListener("submit", function (ev) {
     ev.preventDefault();
     var kod = $("kod").value.replace(/\D/g, "");
-    sb.auth.verifyOtp({ email: epost, token: kod, type: "email" }).then(function (r) {
-      if (r.error) { meddela("Koden stämmer inte eller har gått ut. Försök igen eller be om en ny kod.", "fel"); return; }
-      meddela(""); start();
-    });
+    if (!epost) { try { epost = sessionStorage.getItem("lsEpost") || ""; } catch (e) {} }
+    if (!epost) { dolj("form-kod"); visa("form-epost"); meddela("Skriv din e-postadress först.", "fel"); return; }
+    var knapp = ev.submitter || $("form-kod").querySelector("button[type=submit]");
+    knapp.disabled = true;
+    // "email" täcker både engångskod och magisk länk (Supabase loggar den som user_recovery_requested).
+    // Reserv: "recovery" och "magiclink" om första försöket nekas.
+    var typer = ["email", "recovery", "magiclink"];
+    (function prova(i) {
+      sb.auth.verifyOtp({ email: epost, token: kod, type: typer[i] }).then(function (r) {
+        if (r.error && i + 1 < typer.length) { prova(i + 1); return; }
+        knapp.disabled = false;
+        if (r.error) { meddela("Koden stämmer inte eller har gått ut. Använd koden i det senaste mejlet, eller be om en ny kod.", "fel"); return; }
+        try { sessionStorage.removeItem("lsEpost"); } catch (e) {}
+        meddela(""); start();
+      });
+    })(0);
   });
   $("ny-kod").addEventListener("click", function () { dolj("form-kod"); visa("form-epost"); meddela(""); });
   $("logga-ut").addEventListener("click", function () { sb.auth.signOut().then(function () { location.reload(); }); });
@@ -141,6 +154,12 @@
       });
       ul.appendChild(li);
     });
+  }
+  // Gamla mejl med länk: en länkskanner kan ha förbrukat länken, då kommer man hit med #error=...
+  if (/[#&]error(_code)?=/.test(location.hash)) {
+    var fel = /otp_expired/.test(location.hash);
+    history.replaceState(null, "", location.pathname + location.search);
+    meddela(fel ? "Länken i mejlet har redan använts eller gått ut. Skriv koden från mejlet i stället, eller be om en ny kod." : "Inloggningen misslyckades. Be om en ny kod.", "fel");
   }
   sb.auth.onAuthStateChange(function (ev) { if (ev === "SIGNED_IN" && $("inloggad").classList.contains("kk-dold")) start(); });
   start();
