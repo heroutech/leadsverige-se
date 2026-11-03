@@ -1,0 +1,5 @@
+/* Firmarad i sidfoten (2026-11-03, kort rad godkänd av juristen): 12px, centrerad, dämpad grå.
+   Minst 12px och minst 4,5:1. Sidfoten har mörk botten #161B26; #8A8F99 mot #161B26 = 5,31:1 (WCAG). Gatuadressen står i integritetspolicyn. */
+.fot .wrap{grid-template-columns:1.4fr 1fr}
+.fot p.firmarad{grid-column:1/-1;margin:6px 0 0;text-align:center;font-size:12px;line-height:1.4;color:#8A8F99}
+@media (max-width:720px){.fot .wrap{grid-template-columns:1fr}}

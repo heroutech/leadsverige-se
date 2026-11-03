@@ -23,6 +23,8 @@
 <link rel="apple-touch-icon" href="logga/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/stil.css">
 <link rel="stylesheet" href="assets/css/leadsverige-profil.css">
+<link rel="stylesheet" href="assets/css/fot-firmarad.css">
+<link rel="stylesheet" href="assets/css/uppgradering-2026-11.css">
 </head>
 <body>
 <a class="skip" href="#innehall">Hoppa till innehållet</a>
@@ -47,10 +49,10 @@
 
 <section class="hero" aria-labelledby="hero-rubrik">
   <div class="wrap">
-    <div>
+    <div class="hero-text">
       <p class="etikett">Nya affärer för svenska företag</p>
-      <h1 id="hero-rubrik">Rätt kund.<br>I rätt tid.</h1>
-      <p class="ingress">Har ditt företag kunder att vinna eller säljare som behöver fler affärer? LeadSverige letar upp företag, föreningar och offentliga organisationer som just nu har ett behov som passar det ni säljer, till exempel en nyetablering, en expansion eller en upphandling. Ni får en kort lista med källa och datum och bestämmer själva vilka ni hör av er till.</p>
+      <h1 id="hero-rubrik">Hitta nästa affärsläge i din bransch.</h1>
+      <p class="ingress">Vi letar efter aktuella affärssignaler i ditt område. Du får ett tydligt underlag med källa och kontaktväg och väljer själv vilka du hör av dig till. Mejla oss vad ni säljer och var ni arbetar, så börjar vi.</p>
       <div class="knappar">
         <a class="knapp knapp--fylld" href="mailto:hej@leadsverige.se?subject=Jag%20vill%20veta%20mer%20om%20LeadSverige">Kontakta oss</a>
         <a class="knapp knapp--kant" href="#pilot">Så fungerar piloten</a>
@@ -59,30 +61,32 @@
       <span>Varje lead har en källa du själv kan kontrollera.</span></p>
     </div>
 
-    <figure class="kort exempel" aria-label="Exempel på hur ett lead kan se ut. Påhittade uppgifter.">
-      <span class="flagga">Exempel – påhittat</span>
+    <div class="exempel-yta">
+    <figure class="kort exempel exempel--lead" aria-label="Påhittat exempel på ett lead. Företaget, organisationsnumret och källan finns inte i verkligheten.">
+      <span class="flagga">Påhittat exempel</span>
       <div class="rubrikrad">
-        <p><strong>Nytt lead för ditt företag</strong>Påhittat exempel som visar formatet</p>
+        <p><strong>Exempelbolaget AB · Borlänge</strong>Org.nr 556123-0046 (påhittat exempel, inget riktigt bolag)</p>
       </div>
-      <h3>Nytt kontor med ca 25 anställda</h3>
-      <dl>
-        <dt>Typ av signal</dt><dd>Nyetablering</dd>
-        <dt>Källa</dt><dd>Bolagsverket och företagets webbplats (exempel)</dd>
-        <dt>Datum</dt><dd>ÅÅÅÅ-MM-DD</dd>
-        <dt>Beställare</dt><dd>Exempelfastigheter AB</dd>
-        <dt>Org.nr</dt><dd>999999-9999 (ogiltigt, påhittat)</dd>
-        <dt>Kontaktväg</dt><dd>Företagets allmänna mejl</dd>
+      <h3>Flyttar till större lokaler</h3>
+      <dl class="lead-fakta">
+        <dt>Signal</dt><dd>Företaget har meddelat att det flyttar till större lokaler.</dd>
+        <dt>Källa</dt><dd>Företagets pressmeddelande (påhittat)</dd>
+        <dt>Publicerat</dt><dd>2026-10-27</dd>
+        <dt>Kontrollerat</dt><dd>2026-11-02</dd>
       </dl>
-      <div class="lista">
-        <p>Varför det passar dig</p>
-        <ul>
-          <li>Nytt kontor ska startas och behöver leverantörer</li>
-          <li>Kontoret ligger i ert område</li>
-          <li>Etableringen blev känd för mindre än 30 dagar sedan</li>
-        </ul>
+      <div class="lead-delar">
+        <div class="del del--fakta"><p class="del-rubrik">Fakta</p><p>En flytt till större lokaler har offentliggjorts.</p></div>
+        <div class="del del--affar"><p class="del-rubrik">Möjlig affär</p><p>Anpassning av el och belysning i de nya lokalerna kan bli aktuell.</p></div>
+        <div class="del del--okant"><p class="del-rubrik">Okänt</p><p>Om en installatör redan är vald och vem som ansvarar för lokalanpassningen.</p></div>
       </div>
-      <div class="val" aria-hidden="true"><span>Bra</span><span>Kanske</span><span>Dåligt</span></div>
+      <dl class="lead-fakta lead-fakta--sist">
+        <dt>Varför relevant</dt><dd>Du arbetar med kommersiell el i området.</dd>
+        <dt>Nästa steg</dt><dd>Fråga via företagets allmänna kontaktväg vem som ansvarar för flytten.</dd>
+      </dl>
+      <p class="val-rubrik">Ditt betyg</p>
+      <div class="val" aria-hidden="true"><span>Bra</span><span>Kanske</span><span>Fel</span></div>
     </figure>
+    </div>
   </div>
 </section>
 
@@ -128,11 +132,11 @@
       </li>
       <li>
         <h3>Betyg per lead</h3>
-        <p>Du ger varje lead ett betyg: bra, kanske eller dåligt. Det hjälper oss att träffa rätt.</p>
+        <p>Du ger varje lead ett betyg: bra, kanske eller fel, gärna med en kort orsak. Det hjälper oss att träffa rätt.</p>
       </li>
       <li>
-        <h3>Slutsamtal</h3>
-        <p>Vi tar ett kort samtal när piloten är slut. Sedan bestämmer du om du vill fortsätta.</p>
+        <h3>Utvärdering</h3>
+        <p>En kort utvärdering per mejl när piloten är slut. Sedan bestämmer du om du vill fortsätta.</p>
       </li>
     </ol>
   </div>
@@ -147,17 +151,32 @@
       </div>
       <p class="sten">Piloten är gratis i 4 veckor.</p>
     </div>
-    <div class="paket paket--en">
-      <div class="kort priskort">
-        <p class="etikett">Bas</p>
+    <div class="pris-rad">
+      <div class="kort priskort priskort--manad">
+        <h3 class="priskort-rubrik">Det här får ni varje månad</h3>
         <p class="belopp">990&nbsp;kr<small>/mån exkl. moms</small></p>
-        <p class="under">10 leads i månaden.</p>
+        <p class="under">10 kvalificerade leads i er bransch och ert område.</p>
         <ul class="bock">
-          <li>Leads i din bransch och ditt område</li>
-          <li>Källa, datum och motivering för varje lead</li>
+          <li>10 leads per månad</li>
+          <li>Källa och datum för varje lead</li>
+          <li>Fakta skilt från möjlig affär</li>
+          <li>Det som är okänt står med</li>
+          <li>En motivering till varför leadet är relevant för er</li>
+          <li>Ni betygsätter varje lead som bra, kanske eller fel, så blir matchningen bättre</li>
+          <li>Vi fyller aldrig kvoten med svaga leads. Hellre färre</li>
         </ul>
-        <a class="knapp knapp--fylld" href="mailto:hej@leadsverige.se?subject=Jag%20vill%20veta%20mer%20om%20Bas">Fråga om Bas</a>
+        <a class="knapp knapp--fylld" href="mailto:hej@leadsverige.se?subject=Jag%20vill%20veta%20mer%20om%20LeadSverige">Fråga om priset</a>
       </div>
+      <figure class="kort leverans" aria-label="Påhittat exempel på en leverans. Företagen finns inte i verkligheten.">
+        <span class="flagga">Påhittat exempel</span>
+        <p class="etikett">Så ser en leverans ut</p>
+        <ol class="leverans-lista">
+          <li><strong>Exempelbolaget AB, Borlänge</strong><span>Flytt till större lokaler · publicerat 2026-10-27</span></li>
+          <li><strong>Exempelfastigheter AB, Falun</strong><span>Bygglov för ombyggnad till kontor · publicerat 2026-10-22</span></li>
+          <li><strong>Exempelföreningen, Gävle</strong><span>Upphandling av ny belysning · publicerat 2026-10-19</span></li>
+        </ol>
+        <p class="leverans-not">Varje rad har källa, fakta, möjlig affär, okänt, motivering och en plats för ert betyg. Hittar vi färre än 10 leads som håller får ni färre den månaden.</p>
+      </figure>
     </div>
   </div>
 </section>
@@ -178,6 +197,10 @@
         <div class="svar"><p>Nej. Ett lead är en signal om ett möjligt behov, inte en beställning.</p></div>
       </details>
       <details>
+        <summary>Vad händer om ni inte hittar 10 bra leads?</summary>
+        <div class="svar"><p>Då får du färre den månaden. Vi fyller aldrig ut listan med svaga leads.</p></div>
+      </details>
+      <details>
         <summary>Vad händer med uppgifterna?</summary>
         <div class="svar"><p>Läs vår <a href="integritetspolicy.html">integritetspolicy</a>. Vill du inte bli kontaktad av oss kan du <a href="avregistrera.html">avregistrera dig</a>.</p></div>
       </details>
@@ -196,8 +219,8 @@
       </ul>
     </div>
     <div class="kort">
-      <h3>Företagsuppgifter</h3>
-      <p>LeadSverige är en tjänst från Heroutech Enterprice AB<br>Org.nr 556583-5187<br>Långsvedsvägen 8, 774 62 Avesta<br><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a></p>
+      <h3>LeadSverige</h3>
+      <p>Nya affärer för svenska företag.<br><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a></p>
     </div>
   </div>
 </section>
@@ -219,14 +242,11 @@
       <h3>Kontakt</h3>
       <p><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a></p>
     </div>
-    <div>
-      <h3>Företaget</h3>
-      <p>LeadSverige är en tjänst från Heroutech Enterprice AB, org.nr 556583-5187, Långsvedsvägen 8, 774 62 Avesta.</p>
-    </div>
     <div class="botten">
       <span>LeadSverige</span>
       <span><a href="integritetspolicy.html">Integritetspolicy</a> · <a href="avregistrera.html">Avregistrera</a></span>
     </div>
+    <p class="firmarad">H. Enterprice AB · org.nr 556583-5187 · säte Avesta</p>
   </div>
 </footer>
 </body>

@@ -1,0 +1,55 @@
+/* LeadSverige – utkast 2026-11-03 (1A kortare första vy, 1B nytt exempel-lead, 1D priskort).
+   Laddas efter stil.css och leadsverige-profil.css. Archivo, #1E50C8 och #161B26 oförändrade. */
+
+/* 1A: första vyn */
+.hero h1{font-size:clamp(2rem,4.6vw,3.9rem);max-width:12em}
+.hero .ingress{max-width:32em}
+
+/* 1B: exempel-lead med mjuk blå belysning */
+.exempel-yta{position:relative;isolation:isolate}
+.exempel-yta::before{content:"";position:absolute;inset:-8% -10%;z-index:-1;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(30,80,200,.20),rgba(30,80,200,.08) 55%,rgba(30,80,200,0));pointer-events:none}
+.exempel--lead{box-shadow:0 1px 0 rgba(22,27,38,.04),0 24px 48px -28px rgba(30,80,200,.45)}
+.exempel--lead .rubrikrad strong{font-size:1.02rem}
+.exempel--lead h3{font-size:1.2rem;margin:.1em 0 .7em}
+.exempel--lead .lead-fakta{grid-template-columns:7.6em 1fr;gap:.3em 1em;margin:0 0 1em;font-size:.93rem}
+.exempel--lead .lead-fakta dd{font-weight:500}
+.exempel--lead .lead-fakta--sist{margin:1em 0 1.1em}
+.lead-delar{display:grid;gap:8px}
+.del{padding:10px 14px;border-radius:6px;background:var(--ls-surface,#F3F5F9);font-size:.92rem;border-left:3px solid var(--ls-rule,#DDE3ED)}
+.del p{margin:0}
+.del .del-rubrik{font-weight:600;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ls-muted,#586174);margin-bottom:.15em}
+.del--fakta{border-left-color:var(--ls-graphite,#161B26)}
+.del--affar{border-left-color:var(--ls-blue,#1E50C8)}
+.del--okant{border-left-style:dashed;border-left-color:var(--ls-muted,#586174)}
+.val-rubrik{font-size:.8rem;font-weight:600;color:var(--ls-muted,#586174);margin:0 0 .4em}
+
+/* 1D: priskort + leveransexempel */
+.pris-rad{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.priskort--manad{display:flex;flex-direction:column;border-top:4px solid var(--ls-blue,#1E50C8)}
+.priskort--manad .priskort-rubrik{font-size:1.3rem;margin:0 0 .3em}
+.priskort--manad .bock{flex:1}
+.leverans{position:relative;background:var(--ls-surface,#F3F5F9)}
+.leverans .flagga{position:absolute;top:-12px;right:20px;background:var(--ls-white,#fff);color:var(--ls-graphite,#161B26);border:1px solid var(--ls-rule,#DDE3ED);font:600 .72rem/1 var(--ls-font,Archivo,Arial,sans-serif);letter-spacing:.1em;text-transform:uppercase;padding:.55em .8em;border-radius:4px}
+.leverans-lista{list-style:none;margin:0 0 1.2em;padding:0;display:grid;gap:10px;counter-reset:lev}
+.leverans-lista li{counter-increment:lev;background:var(--ls-white,#fff);border:1px solid var(--ls-rule,#DDE3ED);border-radius:6px;padding:12px 14px 12px 52px;position:relative}
+.leverans-lista li::before{content:counter(lev);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--ls-blue,#1E50C8);color:#fff;font:600 .85rem/26px var(--ls-font,Archivo,Arial,sans-serif);text-align:center}
+.leverans-lista strong{display:block;font-size:.98rem}
+.leverans-lista span{display:block;font-size:.88rem;color:var(--ls-muted,#586174)}
+.leverans-not{font-size:.92rem;margin:0;color:var(--ls-graphite,#161B26)}
+
+@media (max-width:980px){
+  .pris-rad{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:720px){
+  .hero{padding:32px 0 56px}
+  .hero .wrap{gap:40px}
+  .hero h1{font-size:2.05rem;line-height:1.08;margin-bottom:.4em}
+  .hero .etikett{margin-bottom:.7rem}
+  .hero .knappar{margin:1.25rem 0 .9rem}
+  .exempel--lead .lead-fakta{grid-template-columns:6.4em 1fr;gap:.35em .8em;font-size:.9rem}
+  .exempel{padding:22px 18px}
+  .exempel-yta::before{inset:-4% -6%}
+  .leverans-lista li{padding-left:48px}
+}
+.hero{overflow:hidden}
