@@ -1,253 +1,65 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" data-motion="on">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LeadSverige – nya affärer för svenska företag</title>
-<meta name="description" content="LeadSverige hittar företag och organisationer som just nu har ett behov som passar det du säljer, med källa och datum. För alla företag som har kunder eller säljare och vill ha fler affärer.">
+<meta name="theme-color" content="#111a2b">
+<meta name="description" content="LeadSverige hittar relevanta affärssignaler i din bransch och ditt område, med källa, sammanhang och nästa steg.">
+<title>LeadSverige – hitta nästa affärsläge</title>
+<link rel="canonical" href="https://leadsverige.se/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
 <meta property="og:site_name" content="LeadSverige">
-<meta property="og:title" content="LeadSverige – nya affärer för svenska företag">
-<meta property="og:description" content="LeadSverige hittar företag och organisationer som just nu har ett behov som passar det du säljer, med källa och datum. För alla företag som har kunder eller säljare och vill ha fler affärer.">
+<meta property="og:title" content="LeadSverige – hitta nästa affärsläge">
+<meta property="og:description" content="LeadSverige hittar relevanta affärssignaler i din bransch och ditt område, med källa, sammanhang och nästa steg.">
 <meta property="og:url" content="https://leadsverige.se/">
-<!-- og:image saknas: lägg till en delningsbild (1200x630) när logga/bildmaterial är klart. -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeadSverige – nya affärer för svenska företag">
-<meta name="twitter:description" content="LeadSverige hittar företag och organisationer som just nu har ett behov som passar det du säljer, med källa och datum. För alla företag som har kunder eller säljare och vill ha fler affärer.">
-<link rel="canonical" href="https://leadsverige.se/">
-<meta name="theme-color" content="#1E50C8">
-<!-- FAVICON: filerna i logga/ kontrollerade 2026-10-31 (favicon.ico, favicon.svg, apple-touch-icon.png). -->
+<meta name="twitter:title" content="LeadSverige – hitta nästa affärsläge">
+<meta name="twitter:description" content="LeadSverige hittar relevanta affärssignaler i din bransch och ditt område, med källa, sammanhang och nästa steg.">
 <link rel="icon" href="logga/favicon.ico" sizes="any">
 <link rel="icon" href="logga/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="logga/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/stil.css">
-<link rel="stylesheet" href="assets/css/leadsverige-profil.css">
-<link rel="stylesheet" href="assets/css/fot-firmarad.css">
-<link rel="stylesheet" href="assets/css/uppgradering-2026-11.css">
+<link rel="preload" href="assets/fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/startsida.css">
 </head>
 <body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol><symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6L12 3Z"/><path d="m8 12 3 3 5-6"/></symbol><symbol id="pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.3"/></symbol><symbol id="document" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Zm8 0v5h4M9 12h6m-6 4h6"/></symbol><symbol id="target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol><symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol><symbol id="play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol><symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol><symbol id="sliders" viewBox="0 0 24 24"><path d="M4 6h7m4 0h5M4 12h2m4 0h10M4 18h9m4 0h3"/><circle cx="13" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="15" cy="18" r="2"/></symbol>
+</defs></svg>
 <a class="skip" href="#innehall">Hoppa till innehållet</a>
-<header class="topp">
-  <div class="wrap">
-    <!-- LOGGA: logga/leadsverige-ordmarke.svg med PNG som reserv, kontrollerade 2026-10-31. Alt-texten "LeadSverige" visas om bilden saknas. -->
-    <a class="logo" href="index.html" aria-label="LeadSverige – till början">
-      <picture>
-        <source srcset="logga/leadsverige-ordmarke.svg" type="image/svg+xml">
-        <img src="logga/leadsverige-ordmarke.png" alt="LeadSverige" class="logo-text" width="160" height="28">
-      </picture>
-    </a>
-    <nav class="meny" aria-label="Huvudmeny">
-      <a href="index.html#vad">Vad vi gör</a>
-      <a href="index.html#pilot">Piloten</a>
-      <a href="index.html#pris">Pris</a>
-      <a class="knapp knapp--fylld" href="index.html#kontakt">Kontakta oss</a>
-    </nav>
-  </div>
-</header>
+<header class="site-header"><div class="wrap nav-shell">
+<a class="brand" href="#" aria-label="LeadSverige – till början"><img src="logga/leadsverige-ordmarke-mork-bakgrund.svg" width="190" height="33" alt="LeadSverige"></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Öppna menyn"><svg class="icon"><use href="#menu"/></svg></button>
+<nav class="nav-links" id="nav-links" aria-label="Huvudmeny"><a href="#vad">Så fungerar det</a><a href="#pilot">Piloten</a><a href="#pris">Priset</a><a class="nav-cta" href="#kontakt">Kontakta oss <span aria-hidden="true">↗</span></a></nav>
+</div></header>
 <main id="innehall">
-
-<section class="hero" aria-labelledby="hero-rubrik">
-  <div class="wrap">
-    <div class="hero-text">
-      <p class="etikett">Nya affärer för svenska företag</p>
-      <h1 id="hero-rubrik">Hitta nästa affärsläge i din bransch.</h1>
-      <p class="ingress">Vi letar efter aktuella affärssignaler i ditt område. Du får ett tydligt underlag med källa och kontaktväg och väljer själv vilka du hör av dig till. Mejla oss vad ni säljer och var ni arbetar, så börjar vi.</p>
-      <div class="knappar">
-        <a class="knapp knapp--fylld" href="mailto:hej@leadsverige.se?subject=Jag%20vill%20veta%20mer%20om%20LeadSverige">Kontakta oss</a>
-        <a class="knapp knapp--kant" href="#pilot">Så fungerar piloten</a>
-      </div>
-      <p class="notis-rad"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="#1E50C8"/></svg>
-      <span>Varje lead har en källa du själv kan kontrollera.</span></p>
-    </div>
-
-    <div class="exempel-yta">
-    <figure class="kort exempel exempel--lead" aria-label="Påhittat exempel på ett lead. Företaget, organisationsnumret och källan finns inte i verkligheten.">
-      <span class="flagga">Påhittat exempel</span>
-      <div class="rubrikrad">
-        <p><strong>Exempelbolaget AB · Borlänge</strong>Org.nr 556123-0046 (påhittat exempel, inget riktigt bolag)</p>
-      </div>
-      <h3>Flyttar till större lokaler</h3>
-      <dl class="lead-fakta">
-        <dt>Signal</dt><dd>Företaget har meddelat att det flyttar till större lokaler.</dd>
-        <dt>Källa</dt><dd>Företagets pressmeddelande (påhittat)</dd>
-        <dt>Publicerat</dt><dd>2026-10-27</dd>
-        <dt>Kontrollerat</dt><dd>2026-11-02</dd>
-      </dl>
-      <div class="lead-delar">
-        <div class="del del--fakta"><p class="del-rubrik">Fakta</p><p>En flytt till större lokaler har offentliggjorts.</p></div>
-        <div class="del del--affar"><p class="del-rubrik">Möjlig affär</p><p>Anpassning av el och belysning i de nya lokalerna kan bli aktuell.</p></div>
-        <div class="del del--okant"><p class="del-rubrik">Okänt</p><p>Om en installatör redan är vald och vem som ansvarar för lokalanpassningen.</p></div>
-      </div>
-      <dl class="lead-fakta lead-fakta--sist">
-        <dt>Varför relevant</dt><dd>Du arbetar med kommersiell el i området.</dd>
-        <dt>Nästa steg</dt><dd>Fråga via företagets allmänna kontaktväg vem som ansvarar för flytten.</dd>
-      </dl>
-      <p class="val-rubrik">Ditt betyg</p>
-      <div class="val" aria-hidden="true"><span>Bra</span><span>Kanske</span><span>Fel</span></div>
-    </figure>
-    </div>
-  </div>
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-image" aria-hidden="true"></div><div class="hero-light" aria-hidden="true"></div><div class="hero-orbit" aria-hidden="true"></div>
+<div class="wrap hero-grid">
+<div class="hero-copy"><p class="eyebrow">Affärssignaler för svenska företag</p><h1 id="hero-title">Hitta nästa<br><span class="accent">affärsläge.</span></h1><p class="hero-intro">Aktuella signaler i din bransch och ditt område. Med källan, sammanhanget och ett tydligt nästa steg.</p><div class="hero-actions"><a class="button button-primary" href="#kontakt">Anmäl intresse <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><a class="button button-ghost" href="#vad">Så fungerar det</a></div><p class="hero-proof"><svg class="icon" aria-hidden="true"><use href="#shield"/></svg>Du väljer själv vilka du tar kontakt med.</p></div>
+<div class="hero-card-wrap"><div class="card-shadow" aria-hidden="true"></div><article class="lead-card" aria-label="Fiktivt exempel på ett lead">
+<div class="lead-topline"><span class="eyebrow">Ett möjligt affärsläge</span><span class="example-label">Fiktivt exempel</span></div>
+<div class="lead-main"><p class="lead-location"><svg class="icon" aria-hidden="true"><use href="#pin"/></svg>Borlänge · El &amp; installation</p><p class="lead-company">Exempelbolaget AB · org.nr 556123-0046</p><h2>Flyttar till<br>större lokaler.</h2><p class="lead-reason">En offentliggjord flytt kan innebära behov av el och belysning i de nya lokalerna.</p><div class="lead-next"><span class="small-label"><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>Ditt nästa steg</span><p>Fråga vem som ansvarar för flytten och om de redan har hjälp med lokalanpassningen.</p></div><div class="lead-meta"><span class="chip">Matchat mot ditt område</span><span class="chip">Källa &amp; datum</span></div></div>
+<details class="lead-disclosure" id="lead-underlag"><summary>Visa fakta och underlag <svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary><div class="lead-evidence"><p><strong>Fakta i exemplet</strong>Företaget har offentliggjort en flytt till större lokaler.</p><p><strong>Möjlig affär</strong>Anpassning av el och belysning kan bli aktuell. Detta är en bedömning, inte en beställning.</p><p><strong>Det vi inte vet</strong>Om installatör är vald eller vem som ansvarar för lokalanpassningen.</p><p><strong>Källa och datum i exemplet</strong>Fiktivt pressmeddelande. Publicerat 27 oktober 2026. Kontrollerat 2 november 2026.</p><p class="evidence-note">Företag, händelse och källa är påhittade för att visa formatet. Verkliga leads har kontrollerbara källor och en allmän kontaktväg.</p></div></details>
+</article></div>
+</div>
+<div class="wrap hero-bottom"><p class="pilot-note"><span aria-hidden="true"></span>Pilot för el &amp; bygg i Dalarna och Gävleborg</p><button class="motion-toggle" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#pause"/></svg><span>Pausa rörelsen</span></button></div>
 </section>
-
-<section class="sektion sektion--sand problem" id="vad" aria-labelledby="vad-rubrik">
-  <div class="wrap">
-    <div class="huvud">
-      <p class="etikett">Vad LeadSverige gör</p>
-      <h2 id="vad-rubrik">Vi hittar signalerna. Du tar kontakten.</h2>
-      <p>Nya affärsmöjligheter syns ofta i offentliga källor innan konkurrenterna hör av sig. Vi går igenom källorna åt dig.</p>
-    </div>
-    <div class="tre">
-      <div class="kort">
-        <h3>Vi letar</h3>
-        <p>Vi går igenom öppna källor som kommunernas anslagstavlor och kungörelser, upphandlingar i EU:s databas TED, Bolagsverket och företagens egna webbplatser.</p>
-      </div>
-      <div class="kort">
-        <h3>Vi sorterar</h3>
-        <p>Du får bara leads inom din bransch och ditt område. Signalerna är aktuella, och mottagaren är alltid ett företag, en förening eller en kommun, aldrig en privatperson.</p>
-      </div>
-      <div class="kort">
-        <h3>Du bestämmer</h3>
-        <p>Varje lead har källa, datum, en kort motivering och en allmän kontaktväg. Du väljer själv vilka du hör av dig till.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sektion sektion--skog" id="pilot" aria-labelledby="pilot-rubrik">
-  <div class="wrap">
-    <div class="huvud">
-      <p class="etikett">Piloten</p>
-      <h2 id="pilot-rubrik">4 veckor gratis. Sedan bestämmer du.</h2>
-      <p>Piloten startar med el och bygg i Dalarna och Gävleborg.</p>
-    </div>
-    <ol class="steg">
-      <li>
-        <h3>Start</h3>
-        <p>Du berättar vad ditt företag säljer och var ni arbetar.</p>
-      </li>
-      <li>
-        <h3>Ca 10 leads</h3>
-        <p>Under 4 veckor får du ca 10 leads i din bransch och ditt område, med källa och datum.</p>
-      </li>
-      <li>
-        <h3>Betyg per lead</h3>
-        <p>Du ger varje lead ett betyg: bra, kanske eller fel, gärna med en kort orsak. Det hjälper oss att träffa rätt.</p>
-      </li>
-      <li>
-        <h3>Utvärdering</h3>
-        <p>En kort utvärdering per mejl när piloten är slut. Sedan bestämmer du om du vill fortsätta.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<section class="sektion pris" id="pris" aria-labelledby="pris-rubrik">
-  <div class="wrap">
-    <div class="pris-intro">
-      <div>
-        <p class="etikett">Pris</p>
-        <h2 id="pris-rubrik">Ett enkelt pris efter piloten.</h2>
-      </div>
-      <p class="sten">Piloten är gratis i 4 veckor.</p>
-    </div>
-    <div class="pris-rad">
-      <div class="kort priskort priskort--manad">
-        <h3 class="priskort-rubrik">Det här får ni varje månad</h3>
-        <p class="belopp">990&nbsp;kr<small>/mån exkl. moms</small></p>
-        <p class="under">10 kvalificerade leads i er bransch och ert område.</p>
-        <ul class="bock">
-          <li>10 leads per månad</li>
-          <li>Källa och datum för varje lead</li>
-          <li>Fakta skilt från möjlig affär</li>
-          <li>Det som är okänt står med</li>
-          <li>En motivering till varför leadet är relevant för er</li>
-          <li>Ni betygsätter varje lead som bra, kanske eller fel, så blir matchningen bättre</li>
-          <li>Vi fyller aldrig kvoten med svaga leads. Hellre färre</li>
-        </ul>
-        <a class="knapp knapp--fylld" href="mailto:hej@leadsverige.se?subject=Jag%20vill%20veta%20mer%20om%20LeadSverige">Fråga om priset</a>
-      </div>
-      <figure class="kort leverans" aria-label="Påhittat exempel på en leverans. Företagen finns inte i verkligheten.">
-        <span class="flagga">Påhittat exempel</span>
-        <p class="etikett">Så ser en leverans ut</p>
-        <ol class="leverans-lista">
-          <li><strong>Exempelbolaget AB, Borlänge</strong><span>Flytt till större lokaler · publicerat 2026-10-27</span></li>
-          <li><strong>Exempelfastigheter AB, Falun</strong><span>Bygglov för ombyggnad till kontor · publicerat 2026-10-22</span></li>
-          <li><strong>Exempelföreningen, Gävle</strong><span>Upphandling av ny belysning · publicerat 2026-10-19</span></li>
-        </ol>
-        <p class="leverans-not">Varje rad har källa, fakta, möjlig affär, okänt, motivering och en plats för ert betyg. Hittar vi färre än 10 leads som håller får ni färre den månaden.</p>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="sektion sektion--sand" id="fragor" aria-labelledby="faq-rubrik">
-  <div class="wrap">
-    <div class="huvud">
-      <p class="etikett">Vanliga frågor</p>
-      <h2 id="faq-rubrik">Bra att veta</h2>
-    </div>
-    <div class="faq">
-      <details>
-        <summary>Kontaktar ni företagen åt mig?</summary>
-        <div class="svar"><p>Nej. Du får leadet och tar kontakten själv.</p></div>
-      </details>
-      <details>
-        <summary>Kan ni lova att jag får uppdrag?</summary>
-        <div class="svar"><p>Nej. Ett lead är en signal om ett möjligt behov, inte en beställning.</p></div>
-      </details>
-      <details>
-        <summary>Vad händer om ni inte hittar 10 bra leads?</summary>
-        <div class="svar"><p>Då får du färre den månaden. Vi fyller aldrig ut listan med svaga leads.</p></div>
-      </details>
-      <details>
-        <summary>Vad händer med uppgifterna?</summary>
-        <div class="svar"><p>Läs vår <a href="integritetspolicy.html">integritetspolicy</a>. Vill du inte bli kontaktad av oss kan du <a href="avregistrera.html">avregistrera dig</a>.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="sektion kontakt" id="kontakt" aria-labelledby="kontakt-rubrik">
-  <div class="wrap">
-    <div>
-      <p class="etikett">Kontakt</p>
-      <h2 id="kontakt-rubrik">Vill du vara med i piloten?</h2>
-      <p>Skriv några rader om ditt företag: vad ni säljer och var ni arbetar.</p>
-      <ul class="kontaktlista">
-        <li><span>E-post</span><a href="mailto:hej@leadsverige.se?subject=Pilot%20LeadSverige">hej@leadsverige.se</a></li>
-      </ul>
-    </div>
-    <div class="kort">
-      <h3>LeadSverige</h3>
-      <p>Nya affärer för svenska företag.<br><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a></p>
-    </div>
-  </div>
-</section>
-
+<div class="proof-bar"><div class="wrap proof-items"><p class="proof-item"><svg class="icon" aria-hidden="true"><use href="#document"/></svg>Källor du själv kan kontrollera</p><p class="proof-item"><svg class="icon" aria-hidden="true"><use href="#target"/></svg>Din bransch. Ditt arbetsområde.</p><p class="proof-item"><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>Underlag för nästa kontakt</p></div></div>
+<section class="section" id="vad" aria-labelledby="vad-title"><div class="wrap">
+<div class="section-heading"><div><p class="eyebrow">Från signal till möjlighet</p><h2 id="vad-title">Vi hittar signalerna.<br>Du tar kontakten.</h2></div><p>En nyetablering, expansion eller upphandling kan bli början på en affär. Vi går igenom öppna källor och sorterar fram det som passar er.</p></div>
+<div class="process"><article class="process-step"><span class="step-index">01 / UPPTÄCKA<svg class="icon" aria-hidden="true"><use href="#search"/></svg></span><h3>Vi letar.</h3><p>Vi går igenom öppna källor, från kommunernas kungörelser till upphandlingar och företagens egna webbplatser.</p><div class="source-tags"><span>Kommuner</span><span>TED</span><span>Bolagsverket</span></div></article><article class="process-step"><span class="step-index">02 / SORTERA<svg class="icon" aria-hidden="true"><use href="#sliders"/></svg></span><h3>Vi hittar relevansen.</h3><p>Vi matchar signalerna mot er bransch och ert arbetsområde. Mottagaren är ett företag, en förening eller en kommun.</p><div class="source-tags"><span>Bransch</span><span>Område</span><span>Aktualitet</span></div></article><article class="process-step"><span class="step-index">03 / GÅ VIDARE<svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></span><h3>Du bestämmer.</h3><p>Du får källa, datum, en motivering och en allmän kontaktväg. Sedan väljer du själv vilka du hör av dig till.</p><div class="source-tags"><span>Underlag</span><span>Kontaktväg</span><span>Nästa steg</span></div></article></div>
+<div class="section-statement"><strong>Fakta, möjlig affär och det som är okänt hålls isär.</strong><span>Ett lead är en möjlighet, inte ett löfte om uppdrag.</span></div>
+</div></section>
+<section class="pilot-section" id="pilot" aria-labelledby="pilot-title"><div class="wrap pilot-panel"><div class="pilot-intro"><p class="eyebrow">Börja med piloten</p><h2 id="pilot-title">4 veckor gratis.<br>Sedan väljer du.</h2><p>För el- och byggföretag i Dalarna och Gävleborg. Prova om affärssignalerna är relevanta för just er.</p><a class="button button-white" href="mailto:hej@leadsverige.se?subject=Pilot%20LeadSverige">Jag är intresserad <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div><div class="pilot-steps"><article class="pilot-step"><span class="number">1</span><h3>Berätta om er</h3><p>Vad säljer ni och var arbetar ni? Det blir utgångspunkten för sökningen.</p></article><article class="pilot-step"><span class="number">2</span><h3>Få cirka 10 leads</h3><p>Under fyra veckor får ni affärssignaler inom er bransch och ert område.</p></article><article class="pilot-step"><span class="number">3</span><h3>Tyck till</h3><p>Bra, kanske eller fel? En kort orsak hjälper oss att förbättra matchningen.</p></article><article class="pilot-step"><span class="number">4</span><h3>Välj hur ni fortsätter</h3><p>Vi utvärderar kort per mejl. Sedan bestämmer ni om ni vill fortsätta.</p></article></div></div></section>
+<section class="section price-section" id="pris" aria-labelledby="pris-title"><div class="wrap price-grid"><div class="price-copy"><p class="eyebrow">Ett tydligt erbjudande</p><h2 id="pris-title">Mer sammanhang.<br>Bättre underlag.</h2><p>Se vad som har hänt, varför det kan vara relevant och vad du behöver ta reda på. Allt samlat för att göra nästa kontakt enklare.</p><div class="delivery-example"><div class="delivery-heading"><strong>Så kan en leverans se ut</strong><span class="example-label">Fiktivt exempel</span></div><ul class="delivery-list"><li><svg class="icon" aria-hidden="true"><use href="#document"/></svg><div><b>Exempelbolaget AB · Borlänge</b><span>Flytt till större lokaler</span><small>Publicerat 27 oktober 2026</small></div></li><li><svg class="icon" aria-hidden="true"><use href="#document"/></svg><div><b>Exempelfastigheter AB · Falun</b><span>Ombyggnad till kontor</span><small>Publicerat 22 oktober 2026</small></div></li><li><svg class="icon" aria-hidden="true"><use href="#document"/></svg><div><b>Exempelföreningen · Gävle</b><span>Upphandling av ny belysning</span><small>Publicerat 19 oktober 2026</small></div></li></ul></div></div>
+<div class="price-card"><p class="plan-name">LeadSverige Bas</p><div class="price"><strong>990 kr</strong><span>/ månad</span></div><p class="tax">Exklusive moms · efter den kostnadsfria piloten</p><h3 class="plan-intro">10 leads i er bransch och ert område.</h3><ul class="feature-list"><li><svg class="icon" aria-hidden="true"><use href="#check"/></svg>Källa och datum för varje lead</li><li><svg class="icon" aria-hidden="true"><use href="#check"/></svg>Fakta, möjlig affär och okända förhållanden</li><li><svg class="icon" aria-hidden="true"><use href="#check"/></svg>En tydlig motivering till varför det passar er</li><li><svg class="icon" aria-hidden="true"><use href="#check"/></svg>Allmän kontaktväg och rekommenderat nästa steg</li><li><svg class="icon" aria-hidden="true"><use href="#check"/></svg>Er återkoppling förbättrar matchningen</li></ul><p class="quality-note">Kvalitet går före antal. Hittar vi färre än 10 leads som håller får ni färre den månaden. Vi fyller inte ut med svaga signaler.</p><a class="button button-primary" href="mailto:hej@leadsverige.se?subject=Jag%20vill%20veta%20mer%20om%20LeadSverige">Prata med oss om Bas <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><p class="plan-footnote">Du tar kontakten. Vi hjälper dig hitta affärsläget.</p></div>
+</div></section>
+<section class="section" id="fragor" aria-labelledby="fragor-title"><div class="wrap faq-grid"><div class="faq-intro"><p class="eyebrow">Bra att veta</p><h2 id="fragor-title">Raka svar.</h2><p>Tydliga förväntningar från början. Här är svaren på några vanliga frågor.</p><a class="text-link" href="mailto:hej@leadsverige.se">Fråga oss <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div><div class="faq-list"><details><summary>Kontaktar ni företagen åt mig?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><div class="faq-answer">Nej. Vi hittar affärssignaler och ger dig ett underlag med en allmän kontaktväg. Du väljer själv vilka du hör av dig till och tar kontakten.</div></details><details><summary>Kan ni lova att jag får uppdrag?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><div class="faq-answer">Nej. Ett lead är en signal om ett möjligt behov, inte en beställning eller en garanti om uppdrag. Därför skiljer vi mellan fakta, möjlig affär och det som ännu är okänt.</div></details><details><summary>Vad händer om ni inte hittar 10 bra leads?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><div class="faq-answer">Då får du färre leads den månaden. Vi fyller aldrig kvoten med svaga signaler för att nå ett visst antal.</div></details><details><summary>Vad händer med uppgifterna?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><div class="faq-answer">Läs om hur uppgifter hanteras i vår <a href="integritetspolicy.html">integritetspolicy</a>. Här finns också information om <a href="avregistrera.html">avregistrering</a>.</div></details></div></div></section>
+<section class="contact-section" id="kontakt" aria-labelledby="kontakt-title"><div class="wrap contact-panel"><div><p class="eyebrow">Nästa steg</p><h2 id="kontakt-title">Vad vill ni hitta<br>fler affärer inom?</h2><p>Mejla några rader om vad ditt företag säljer och var ni arbetar. Så tar vi det därifrån.</p></div><div class="contact-action"><a class="button button-white" href="mailto:hej@leadsverige.se?subject=Pilot%20LeadSverige">Skriv till oss <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><p>hej@leadsverige.se</p></div></div></section>
 </main>
-
-
-<footer class="fot">
-  <div class="wrap">
-    <div>
-      <!-- LOGGA (mörk bakgrund): logga/leadsverige-ordmarke-mork-bakgrund.svg/.png. -->
-      <picture>
-        <source srcset="logga/leadsverige-ordmarke-mork-bakgrund.svg" type="image/svg+xml">
-        <img src="logga/leadsverige-ordmarke-mork-bakgrund.png" alt="LeadSverige" class="logo-text" width="150" height="26">
-      </picture>
-      <p>Nya affärer för svenska företag: aktuella signaler med källa och datum.</p>
-    </div>
-    <div>
-      <h3>Kontakt</h3>
-      <p><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a></p>
-    </div>
-    <div class="botten">
-      <span>LeadSverige</span>
-      <span><a href="integritetspolicy.html">Integritetspolicy</a> · <a href="avregistrera.html">Avregistrera</a></span>
-    </div>
-    <p class="firmarad">H. Enterprice AB · org.nr 556583-5187 · säte Avesta</p>
-  </div>
-</footer>
+<footer class="site-footer"><div class="wrap"><div class="footer-top"><a href="#" aria-label="LeadSverige – till början"><img src="logga/leadsverige-ordmarke.svg" alt="LeadSverige" width="160" height="28"></a><div class="footer-links"><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a><a href="integritetspolicy.html">Integritetspolicy</a><a href="avregistrera.html">Avregistrera</a></div></div><div class="footer-bottom"><p class="concept-note">Bilden är en illustration, inte ett referensprojekt.</p></div><p class="firmarad">H. Enterprice AB · org.nr 556583-5187 · säte Avesta</p></div></footer>
+<script src="assets/js/startsida.js"></script>
 </body>
 </html>
