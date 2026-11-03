@@ -110,15 +110,21 @@
     el.addEventListener("keydown", function (ev) { if (ev.key === "ArrowRight") betygsatt(l, "bra"); if (ev.key === "ArrowLeft") betygsatt(l, "fel"); if (ev.key === "ArrowDown") betygsatt(l, "kanske"); });
   }
   document.querySelectorAll("#svajp-knappar button").forEach(function (k) { k.addEventListener("click", function () { if (ko[0]) betygsatt(ko[0], k.dataset.b); }); });
+  var upptagen = false;
+  function knappar(pa) { document.querySelectorAll("#svajp-knappar button, #historik-lista button").forEach(function (k) { k.disabled = !pa; }); }
   function betygsatt(l, b) {
+    if (upptagen) return; upptagen = true; knappar(false);
+    meddela("Sparar …", "");
+    var klar = function () { upptagen = false; knappar(true); };
     return sb.auth.getSession().then(function (s) {
       if (!s.data.session) { location.reload(); return; }
       return fetch(FN, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer " + s.data.session.access_token, "apikey": NYCKEL },
         body: JSON.stringify({ atgard: "betyg", leverans_id: l.id, betyg: b }) }).then(function (r) { return r.json(); }).then(function (r) {
+        klar();
         if (!r.ok) { meddela("Betyget kunde inte sparas. Försök igen.", "fel"); rita(); return; }
-        senaste[l.id] = b; meddela("Sparat: Lead " + l.kortnummer + " – " + NAMN[b] + ".", "ok"); setTimeout(rita, 180);
+        senaste[l.id] = b; meddela("Sparat: Lead " + l.kortnummer + " – " + NAMN[b] + ".", "ok"); rita();
       });
-    }).catch(function () { meddela("Betyget kunde inte sparas. Försök igen.", "fel"); rita(); });
+    }).catch(function () { klar(); meddela("Betyget kunde inte sparas. Försök igen.", "fel"); rita(); });
   }
   function ritaHistorik(lista) {
     var ul = $("historik-lista"); ul.innerHTML = "";
