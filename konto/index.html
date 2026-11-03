@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kundsida – LeadSverige</title>
+<meta name="description" content="LeadSveriges kundsida: betygsätt veckans leads.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://leadsverige.se/konto/">
+<meta name="theme-color" content="#1E50C8">
+<link rel="icon" href="../logga/favicon.ico" sizes="any">
+<link rel="icon" href="../logga/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../logga/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/stil.css">
+<link rel="stylesheet" href="../assets/css/leadsverige-profil.css">
+<link rel="stylesheet" href="../assets/css/fot-firmarad.css">
+<link rel="stylesheet" href="../assets/css/kundkonto.css">
+</head>
+<body>
+<a class="skip" href="#innehall">Hoppa till innehållet</a>
+<header class="topp">
+  <div class="wrap">
+    <a class="logo" href="../index.html" aria-label="LeadSverige – till början">
+      <picture>
+        <source srcset="../logga/leadsverige-ordmarke.svg" type="image/svg+xml">
+        <img src="../logga/leadsverige-ordmarke.png" alt="LeadSverige" class="logo-text" width="160" height="28">
+      </picture>
+    </a>
+    <nav class="meny" aria-label="Huvudmeny">
+      <a href="../index.html#vad">Vad vi gör</a>
+      <a href="../index.html#pilot">Piloten</a>
+      <a href="../index.html#pris">Pris</a>
+      <a class="knapp knapp--fylld" href="../index.html#kontakt">Kontakta oss</a>
+    </nav>
+  </div>
+</header>
+<main id="innehall" class="kk">
+  <div class="wrap">
+    <div id="meddelande" class="kk-meddelande kk-dold" role="status" aria-live="polite"></div>
+    <section id="inloggning" class="kk-dold">
+      <h1>Logga in</h1>
+      <p>Skriv e-postadressen som ni får leads till. Vi mejlar en inloggningslänk och en kod.</p>
+      <form id="form-epost">
+        <label for="epost">E-post</label>
+        <input type="email" id="epost" autocomplete="email" required>
+        <button type="submit" id="skicka-kod" class="knapp knapp--fylld">Skicka kod</button>
+      </form>
+      <form id="form-kod" class="kk-dold">
+        <label for="kod">Kod från mejlet</label>
+        <input type="text" id="kod" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]{6,12}" required>
+        <button type="submit" class="knapp knapp--fylld">Logga in</button>
+        <p class="kk-liten"><button type="button" id="ny-kod" class="kk-lanknapp">Fel adress eller ingen kod? Försök igen</button></p>
+      </form>
+      <p class="kk-liten">Inget konto än? Mejla <a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a>.</p>
+    </section>
+    <section id="inloggad" class="kk-dold">
+      <div class="kk-topprad"><h1 id="firma">Kundsida</h1><button type="button" id="logga-ut" class="kk-lanknapp">Logga ut</button></div>
+      <p>Svajpa höger om leadet träffar rätt och vänster om det är fel, eller använd knapparna. Era betyg styr nästa urval.</p>
+      <div class="kk-flikar" role="tablist">
+        <button type="button" role="tab" data-flik="nya" aria-selected="true">Att betygsätta (<span id="antal-nya">0</span>)</button>
+        <button type="button" role="tab" data-flik="historik" aria-selected="false">Historik</button>
+      </div>
+      <div class="kk-filter">
+        <div><label for="filter-bransch">Bransch</label><select id="filter-bransch"><option value="">Alla</option></select></div>
+        <div><label for="filter-ort">Ort</label><select id="filter-ort"><option value="">Alla</option></select></div>
+      </div>
+      <div id="svajp-yta">
+        <div id="svajp" class="kk-svajp"></div>
+        <div id="svajp-knappar" class="kk-val">
+          <button type="button" data-b="fel">Fel</button>
+          <button type="button" data-b="kanske">Kanske</button>
+          <button type="button" data-b="bra">Träffar rätt</button>
+        </div>
+      </div>
+      <div id="historik" class="kk-dold"><ul id="historik-lista" class="kk-historik"></ul></div>
+      <p class="kk-liten">När du sparar ett betyg sparar vi klicket och din IP-adress. IP-adressen raderas efter 7 dagar. Läs mer i <a href="../integritetspolicy.html">integritetspolicyn</a>.</p>
+    </section>
+  </div>
+</main>
+<footer class="fot">
+  <div class="wrap">
+    <div>
+      <picture>
+        <source srcset="../logga/leadsverige-ordmarke-mork-bakgrund.svg" type="image/svg+xml">
+        <img src="../logga/leadsverige-ordmarke-mork-bakgrund.png" alt="LeadSverige" class="logo-text" width="150" height="26">
+      </picture>
+      <p>Nya affärer för svenska företag: aktuella signaler med källa och datum.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a></p>
+    </div>
+    <div class="botten">
+      <span>LeadSverige</span>
+      <span><a href="../integritetspolicy.html">Integritetspolicy</a> · <a href="../avregistrera.html">Avregistrera</a></span>
+    </div>
+    <p class="firmarad">H. Enterprice AB · org.nr 556583-5187 · säte Avesta</p>
+  </div>
+</footer>
+<script src="../assets/js/supabase-2.118.0.min.js"></script>
+<script src="../assets/js/konto.js"></script>
+</body>
+</html>

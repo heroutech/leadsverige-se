@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betygsätt lead – LeadSverige</title>
+<meta name="description" content="Betygsätt ett lead från LeadSverige.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://leadsverige.se/betyg/">
+<meta name="theme-color" content="#1E50C8">
+<link rel="icon" href="../logga/favicon.ico" sizes="any">
+<link rel="icon" href="../logga/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../logga/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/stil.css">
+<link rel="stylesheet" href="../assets/css/leadsverige-profil.css">
+<link rel="stylesheet" href="../assets/css/fot-firmarad.css">
+<link rel="stylesheet" href="../assets/css/kundkonto.css">
+</head>
+<body>
+<a class="skip" href="#innehall">Hoppa till innehållet</a>
+<header class="topp">
+  <div class="wrap">
+    <a class="logo" href="../index.html" aria-label="LeadSverige – till början">
+      <picture>
+        <source srcset="../logga/leadsverige-ordmarke.svg" type="image/svg+xml">
+        <img src="../logga/leadsverige-ordmarke.png" alt="LeadSverige" class="logo-text" width="160" height="28">
+      </picture>
+    </a>
+    <nav class="meny" aria-label="Huvudmeny">
+      <a href="../index.html#vad">Vad vi gör</a>
+      <a href="../index.html#pilot">Piloten</a>
+      <a href="../index.html#pris">Pris</a>
+      <a class="knapp knapp--fylld" href="../index.html#kontakt">Kontakta oss</a>
+    </nav>
+  </div>
+</header>
+<main id="innehall" class="kk">
+  <div class="wrap">
+    <h1>Träffar leadet rätt?</h1>
+    <p id="laddar">Hämtar leadet …</p>
+    <div id="meddelande" class="kk-meddelande kk-dold" role="status" aria-live="polite"></div>
+    <div id="formular" class="kk-dold">
+      <div class="kk-kort">
+        <p class="kk-etikett" id="etikett"></p>
+        <p class="kk-titel" id="titel"> <span id="ort"></span></p>
+        <p class="kk-rad" id="rubrik"></p>
+      </div>
+      <p id="tidigare" class="kk-liten kk-dold"></p>
+      <p>Välj betyg och tryck på Spara betyg. Vi sparar inget förrän du trycker på knappen.</p>
+      <div class="kk-val" role="group" aria-label="Betyg">
+        <button type="button" data-b="bra" aria-pressed="false">Träffar rätt</button>
+        <button type="button" data-b="kanske" aria-pressed="false">Kanske</button>
+        <button type="button" data-b="fel" aria-pressed="false">Fel</button>
+      </div>
+      <label for="kommentar">Kort orsak (valfritt)</label>
+      <textarea id="kommentar" rows="3" maxlength="500" placeholder="T.ex. fel ort, för litet uppdrag, redan kund"></textarea>
+      <button type="button" id="spara" class="knapp knapp--fylld" disabled>Spara betyg</button>
+      <p class="kk-liten">När du sparar ett betyg sparar vi klicket och din IP-adress. IP-adressen raderas efter 7 dagar. Läs mer i <a href="../integritetspolicy.html">integritetspolicyn</a>.</p>
+    </div>
+    <p id="efter" class="kk-dold">Du kan stänga sidan. Vill du hellre svara på mejlet går det också bra.</p>
+  </div>
+</main>
+<footer class="fot">
+  <div class="wrap">
+    <div>
+      <picture>
+        <source srcset="../logga/leadsverige-ordmarke-mork-bakgrund.svg" type="image/svg+xml">
+        <img src="../logga/leadsverige-ordmarke-mork-bakgrund.png" alt="LeadSverige" class="logo-text" width="150" height="26">
+      </picture>
+      <p>Nya affärer för svenska företag: aktuella signaler med källa och datum.</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p><a href="mailto:hej@leadsverige.se">hej@leadsverige.se</a></p>
+    </div>
+    <div class="botten">
+      <span>LeadSverige</span>
+      <span><a href="../integritetspolicy.html">Integritetspolicy</a> · <a href="../avregistrera.html">Avregistrera</a></span>
+    </div>
+    <p class="firmarad">H. Enterprice AB · org.nr 556583-5187 · säte Avesta</p>
+  </div>
+</footer>
+<script src="../assets/js/betyg.js"></script>
+</body>
+</html>

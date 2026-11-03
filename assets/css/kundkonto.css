@@ -1,0 +1,40 @@
+/* LeadSverige: tacksida /betyg/ och kundsida /konto/. Egen fil, ändrar inte övrig design. */
+.kk{padding:48px 0 72px;min-height:60vh}
+.kk .wrap{max-width:640px}
+.kk h1{font-size:clamp(1.6rem,4vw,2.1rem);line-height:1.2;margin:0 0 .5em}
+.kk p{line-height:1.55}
+.kk-kort{background:#fff;border:1px solid var(--sand,#DDE3ED);border-left:4px solid var(--skog,#1E50C8);border-radius:var(--r,14px);padding:20px 22px;margin:18px 0}
+.kk-etikett{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--skog,#1E50C8);margin:0 0 4px}
+.kk-titel{font-weight:700;font-size:1.1rem;margin:0}
+.kk-titel span{font-weight:400;color:var(--sten,#586174)}
+.kk-rad{margin:6px 0 0;color:var(--black,#161B26)}
+.kk-liten{font-size:.88rem;color:var(--sten,#586174)}
+.kk-val{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 10px}
+.kk-val button{flex:1 1 120px;font:600 1rem/1 var(--text);padding:.9em 1em;border-radius:999px;border:2px solid var(--sand,#DDE3ED);background:#fff;color:var(--black,#161B26);cursor:pointer}
+.kk-val button[data-b=bra][aria-pressed=true]{border-color:#14633A;background:#E3F4EA;color:#14633A}
+.kk-val button[data-b=kanske][aria-pressed=true]{border-color:#7A5200;background:#FFF3D6;color:#7A5200}
+.kk-val button[data-b=fel][aria-pressed=true]{border-color:#9B1C1C;background:#FBE7E7;color:#9B1C1C}
+.kk textarea,.kk input[type=email],.kk input[type=text],.kk select{width:100%;box-sizing:border-box;font:1rem/1.4 var(--text);padding:.75em .9em;border:1px solid var(--sand,#DDE3ED);border-radius:10px;background:#fff;color:var(--black,#161B26)}
+.kk label{display:block;font-weight:600;margin:14px 0 6px}
+.kk .knapp{margin-top:14px}
+.kk .knapp[disabled]{opacity:.55;cursor:default}
+.kk-meddelande{margin:16px 0;padding:12px 14px;border-radius:10px;background:var(--linne,#F3F5F9)}
+.kk-meddelande.fel{background:#FBE7E7;color:#7A1414}
+.kk-meddelande.ok{background:#E3F4EA;color:#14633A}
+.kk-dold{display:none !important}
+.kk-flikar{display:flex;gap:8px;margin:20px 0 6px;flex-wrap:wrap}
+.kk-flikar button{font:600 .95rem/1 var(--text);padding:.6em 1em;border-radius:999px;border:2px solid var(--sand,#DDE3ED);background:#fff;cursor:pointer;color:var(--black,#161B26)}
+.kk-flikar button[aria-selected=true]{border-color:var(--skog,#1E50C8);color:var(--skog,#1E50C8)}
+.kk-filter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.kk-filter label{margin:0 0 4px;font-size:.85rem}
+.kk-svajp{position:relative;touch-action:pan-y;user-select:none}
+.kk-svajp .kk-kort{transition:transform .2s ease;cursor:grab;margin:10px 0}
+.kk-svajp .kk-kort.dra{transition:none;cursor:grabbing}
+.kk-stampel{position:absolute;top:16px;right:18px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:0;padding:4px 10px;border-radius:8px;border:2px solid}
+.kk-historik{list-style:none;padding:0;margin:10px 0}
+.kk-historik li{border-bottom:1px solid var(--sand,#DDE3ED);padding:12px 0;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.kk-pill{font-size:.8rem;font-weight:700;padding:2px 10px;border-radius:999px;border:1px solid}
+.kk-pill.bra{color:#14633A;background:#E3F4EA}.kk-pill.kanske{color:#7A5200;background:#FFF3D6}.kk-pill.fel{color:#9B1C1C;background:#FBE7E7}.kk-pill.inget{color:#586174;background:#F3F5F9}
+.kk-topprad{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.kk-lanknapp{background:none;border:0;padding:0;color:var(--skog,#1E50C8);font:inherit;text-decoration:underline;cursor:pointer}
+@media (max-width:520px){.kk-filter{grid-template-columns:1fr}}
